@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigation bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        #nav_bar {
+            background-color: black;
+            border-radius: 12px;
+            margin: auto 20px;
+            font-family: Ubuntu;
+        }
+
+        .itms a {
+            text-decoration: none;
+            padding: 3px 3px;
+            color: white;
+        }
+
+        .itms a:hover {
+            color: red;
+        }
+
+        .inp {
+            float: right;
+            margin: 10px 40px;
+            margin-left: 0px;
+            border-radius: 12px;
+            width: 150px;
+            padding: 3px 17px;
+
+        }
+
+        .inp::placeholder {
+            color: rgb(0, 0, 0);
+            padding-left: 10px;
+            font-family: Ubuntu;
+            font-weight: bold;
+        }
+
+        #list {
+            overflow: auto;
+            list-style-type: none;
+        }
+
+        .itms {
+            float: left;
+            margin: 13px 20px;
+            /* margin-top: 12px; */
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="nav_bar">
+        <ul id="list">
+            <div>
+
+                <li class="itms"><a href="#">Home</a></li>
+                <li class="itms"><a href="#">About</a></li>
+                <li class="itms"><a href="#">Contact us</a></li>
+                <li class="itms"><a href="#">Nothing</a></li>
+            </div>
+            <!-- <li> -->
+            <div>
+                <input type="text" class="inp" placeholder="Search here">
+            </div>
+            <!-- </li> -->
+        </ul>
+    </nav>
+</body>
+
+</html>

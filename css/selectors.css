@@ -1,0 +1,23 @@
+/* element selector  selects an entire tag p*/
+p{
+    color:blue;
+}
+/* id selector */
+#head{
+    color: red;
+    background: #000;
+}
+.redbg{
+    background-color: red;
+}
+.redclr{
+    color: red;
+}
+.redb,.redcr{
+    background-color: red;
+    color: red;
+}
+/* universal selector */
+*{
+    background: #000;
+}

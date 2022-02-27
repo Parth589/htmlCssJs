@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+    <!-- icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #logo {
+
+            /* margin: 40%; */
+            margin: auto;
+            margin-bottom: 0px;
+            margin-top: 10%;
+            width: 50%;
+            /* border: 3px solid green; */
+            padding: 10px;
+        }
+
+        #logo p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 120px;
+            color: white;
+            width: 100%;
+            /* height: 200px; */
+            text-align: center;
+        }
+
+        body {
+            background-color: #353535;
+        }
+
+        nav ul {
+            list-style: none;
+            overflow: auto;
+        }
+
+        .listitems a {
+            text-decoration: none;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .listitems {
+            float: right;
+            margin: auto 10px;
+        }
+
+        #searchbox {
+            margin: auto;
+            width: 50%;
+            /* border: 3px solid green; */
+            height: 40px;
+            /* align-items: center; */
+            /* padding: 10px; */
+            /* padding-left: 100px; */
+        }
+
+        #searchbox input {
+            width: 100%;
+            height: 90%;
+            border-radius: 20px;
+            margin: auto;
+        }
+
+        .avatar {
+            width: 30px;
+            /* height: 15px; */
+            border-radius: 15px;
+        }
+
+        #avatar2 {
+            width: 30px;
+            /* height: 15px; */
+            /* border-radius: 15px; */
+        }
+
+        .litxt {
+            margin-top: 10px;
+        }
+
+        #inp::placeholder {
+            padding-left: 10px;
+            font-size: medium;
+
+        }
+
+        #add {
+            border-radius: 50px;
+            width: 50px;
+            height: 50px;
+            background-color: #353535;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .addsbtn p {
+            color: white;
+            font-family: sans-serif;
+            /* text-align: center; */
+        }
+
+        .addsbtn {
+            margin: auto;
+            width: 50%;
+            /* border: 3px solid green; */
+            padding: 10px 45%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="listitems "><a href="#"><img src="/css/Google-Icon-PNG-768x768.jpg" alt="avatar"
+                        class=avatar></a>
+            </li>
+
+            <li class="listitems "><a href="#"><img src="/css/Apps-Google-Chrome-App-List-icon.png" alt="avatar"
+                        id=avatar2></a></li>
+
+            <li class="listitems litxt"><a href="#">Images</a></li>
+            <li class="listitems litxt"><a href="#">Gmail</a></li>
+        </ul>
+    </nav>
+    <div id="logo">
+        <p>Google</p>
+    </div>
+    <div id="searchbox">
+        <input type="text" placeholder="Search Google or type a URL" id="inp">
+    </div>
+    <div class=" addsbtn">
+        <button id="add">+</button>
+        <!-- <label for="add" style="color: white; font-family: sans-serif; margin-top: 10px; text-align: center;">Add -->
+        <!-- Shortcut</label> -->
+    </div>
+</body>
+
+</html>

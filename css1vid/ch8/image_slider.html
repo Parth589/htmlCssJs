@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 15vh;
+            width: 100%;
+            background-color: black;
+        }
+
+        .container {
+            height: 100vh;
+            background-color: aqua;
+        }
+
+        .slider_frame {
+            overflow: hidden;
+            height: 100vh;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .image {
+            /* height: 100%; */
+            width: 100vw;
+            display: block;
+            margin: auto;
+            /* The width of images must be same and translate must be as same as image width */
+            /* animation: slide1 10s  2s infinite ; */
+        }
+
+        @keyframes slide1 {
+            0% {
+                transform: translate(0px);
+            }
+
+            25% {
+                transform: translate(100vw);
+            }
+            50%{
+                transform: translate(0px);
+            }
+            75% {
+                transform: translate(-100vw);
+            }
+            100% {
+                transform: translate(0px);
+            }
+        }
+
+        footer {
+            height: 10vh;
+            width: 100%;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="container">
+            <div class="slider_frame">
+                <img src="/i1.jpg" alt="" class="image i1">
+                <img src="/i2.jpg" alt="" class="image i2">
+                <img src="/i3.jpg" alt="" class="image i3">
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

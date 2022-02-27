@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
+
+<body>
+    <h2>HTML Forms</h2>
+    <!-- the attribute action takes the name of the backend where the data goes for processing -->
+    <form action="my_backend.php">
+
+        <div>
+            <!-- the label tag takes id of element in attribute "for " and it provides other functionality for elements-->
+            <label for="nme">Enter your name</label>
+            <!-- input tag's attribue id sets element id and name set the key cvalue for the element which will be used in backend as key  -->
+            <input type="text" name="my_name" id="nme">
+        </div>
+        <br>
+        <div>
+            <label for="id_">Enter your id</label>
+            <input type="text" name="my_id" id="id_">
+        </div>
+        <br>
+        <div>
+            <label for="mail_">Enter your Email</label>
+            <input type="email" name="my_mail" id="mail_">
+        </div>
+        <!-- the value attribute specifies the text on the submit button -->
+        <br>
+        <div>
+            <label for="elgblty">are you eligible?</label>
+            <input type="checkbox" name="eligiblity" id="elgblty">
+        </div>
+
+        <br>
+        <div>
+            <label for="bons">Enter the Bonus</label>
+            <input type="number" name="bonus" id="bons">
+        </div>
+        <!-- if only one checkbox turn on the name attribue must be same for all input element their id are used in label tag -->
+        <br>
+        <div>
+            <label for="gndr">male</label>
+            <input type="radio" name="gender" id="gndr">
+
+
+            <label for="gndrf"> female</label>
+            <input type="radio" name="gender" id="gndrf">
+
+            <label for="gndro"> other</label>
+            <input type="radio" name="gender" id="gndro">
+        </div>
+
+        <div>
+            <label for="rng">Enter</label>
+            <input type="range" id="rng">
+        </div>
+        <div>
+            <label for="dttm">Enter date</label>
+            <input type="date" name="date_time" id="dttm">
+        </div>
+
+
+        <div>
+            <!-- lable will not work on this -->
+            <select name="car" id="cr">
+                <option value="lambo" id="lamb">Lamborghini</option>
+                <option value="ferari" id="fer" selected>ferari</option>
+            </select>
+        </div>
+        <div>
+            <label for="abt">about urself</label>
+            <br>
+            <textarea name="about" id="abt" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <div>
+
+            <input type="submit" value="sub">
+            <input type="reset" value="res">
+        </div>
+    </form>
+    <!-- this is my live preview -->
+</body>
+
+</html>

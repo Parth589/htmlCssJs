@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+:root {
+  --col1: #f5b900;
+
+  --col2: grey;
+  --headerfooter: black;
+  --fontbl: black;
+  --fontwh: white;
+  --fontfamily: 'Roboto', sans-serif;
+  --headerfontsfinal: 'Raleway', sans-serif;
+  --headerfonts: 'Anton', sans-serif;
+  /* --col1: rgb(0, 195, 255);
+    --col2:grey;
+    --headerfooter:black;
+    --fontbl:black;
+    --fontwh:white; */
+}
+/* global settings */
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+::selection {
+  color: var(--col2);
+  background-color: #f5b80000;
+  text-decoration: underline;
+}
+/* header designs */
+header {
+  /* height: 10vh; */
+  font-family: var(--headerfontsfinal);
+  width: 100vw;
+  background-color: var(--headerfooter);
+  color: var(--fontwh);
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+header nav {
+  overflow: hidden;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+header nav ul {
+  width: 70vw;
+  /* justify-content: space-between */
+  justify-content: space-evenly !important;
+  flex-wrap: wrap;
+}
+header nav ul li {
+  display: inline-block;
+  margin: 10px auto;
+}
+nav ul li a {
+  color: var(--fontwh);
+  text-decoration: none;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+  color: var(--col1);
+  text-decoration: none;
+}
+nav button {
+  font-family: var(--fontfamily);
+  cursor: pointer;
+  background-color: var(--col1);
+  color: var(--fontbl);
+  height: 36px;
+  border-radius: 4px;
+  width: 176px;
+}
+.header_logo {
+  margin: 0 0 0 20px;
+  width: 5vh;
+}
+/* main content designs */
+.container {
+  font-family: var(--fontfamily);
+  min-height: 100vh;
+}
+
+/* pG1 */
+.pg1 {
+  background-image: url('/img/bg/thought-catalog-505eectW54k-unsplash.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  color: var(--fontbl);
+  flex-wrap: wrap;
+}
+.pg1 .txtcontent {
+  flex-direction: column;
+}
+.pg1 .txtcontent h3 {
+  font-size: 34px;
+}
+.pg1 .txtcontent h1 {
+  font-size: 90px;
+}
+.pg1 .txtcontent p {
+  /* font-size: 100px; */
+  text-align: center;
+  width: 40vw;
+  /* height: 10vh; */
+  padding: 20px 0;
+}
+.pg1 .txtcontent hr {
+  /* font-size: 100px; */
+  border: 2px solid var(--fontbl);
+  width: 50vw;
+  color: var(--fontwh);
+  margin: 10px;
+}
+.pg1 .txtcontent a {
+  margin: 20px 0;
+  padding: 10px;
+  color: var(--fontwh);
+  border: 2px solid var(--fontwh);
+  font-family: var(--headerfontsfinal);
+  width: 235px;
+  /* width: 11vw; */
+  text-align: center;
+}
+.pg1 .txtcontent a:hover {
+  border-color: var(--fontbl);
+  color: var(--fontbl);
+}
+@media only screen and (max-width: 1024px) {
+  .pg1 .txtcontent a {
+    color: var(--fontbl);
+    border: 2px solid var(--fontbl);
+  }
+}
+/* PG2 */
+.pg2 {
+  background-color: var(--col1);
+}
+.pg2 .txtcontent {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.pg2 .txtcontent h1,
+.header {
+  font-family: var(--headerfonts);
+  font-weight: bolder;
+  margin: 20px;
+  font-size: 5rem;
+}
+.pg2 .txtcontent p {
+  /* font-weight: bold; */
+  width: 65vw;
+  margin: 0px 20px 20px 20px;
+}
+.pg2 hr {
+  width: 70vw;
+  border: 2px solid var(--fontbl);
+  color: var(--fontbl);
+  text-align: center;
+  margin: 0 15vw;
+}
+.pg2 .pics {
+  min-height: 40vh;
+  width: 80vw;
+  flex-wrap: wrap;
+  /* margin: auto 0; */
+  /* border: 2px solid red; */
+
+  margin: 30px auto;
+}
+.pg2 .pics .work_image {
+  height: 25vh;
+  border-radius: 2vh;
+  /* margin: auto 0; */
+  /* border: 2px solid red; */
+
+  margin: 30px auto;
+}
+.pg2 .logos {
+  padding: 20px;
+}
+.pg2 .logos a img {
+  width: 50px;
+  margin: 0 20px 0 0;
+}
+.pg2 .logos p {
+  margin: 0 25px;
+}
+/* PG2b About */
+.pg2b {
+  background-color: var(--headerfooter);
+  min-height: 80vh;
+  background-image: url('/img/bg/sarah-dorweiler-QeVmJxZOv3k-unsplash.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* opacity: 0.5; */
+  color: var(--fontbl);
+}
+.pg2b h1 {
+  font-family: var(--headerfonts);
+  font-weight: bold;
+  margin: 20px;
+  padding: 20px;
+  padding-bottom: 0;
+  margin-top: 0;
+  font-size: 5rem;
+}
+.pg2b .txtcontent p {
+  /* font-weight: bold; */
+  width: 65vw;
+  margin: 0px 20px 20px 20px;
+}
+.pg2b hr {
+  width: 70vw;
+  color: var(--col1);
+  border: 2px solid var(--col1);
+  text-align: center;
+  margin: 0 15vw;
+}
+.pg2b .pics {
+  min-height: 40vh;
+  width: 80vw;
+  flex-wrap: wrap;
+  /* margin: auto 0; */
+  /* border: 2px solid red; */
+
+  margin: 30px auto;
+}
+.pg2b .pics .about_img {
+  height: 25vh;
+  border-radius: 2vh;
+  /* margin: auto 0; */
+  /* border: 2px solid red; */
+
+  margin: 30px auto;
+}
+.pg2b .logos a img {
+  width: 50px;
+  margin: 0 20px 0 0;
+}
+/* PG3 contact */
+.pg3 {
+  background-color: var(--col1);
+  background-blend-mode: soft-light;
+  height: 70vh;
+  flex-direction: column;
+}
+.pg3 h1 {
+  margin: 20px 0;
+  text-align: center;
+  color: var(--fontbl);
+}
+.pg3 hr {
+  color: var(--fontbl);
+  width: 70vw;
+  margin: 0 auto;
+}
+.pg3 p {
+  color: var(--fontbl);
+  width: 60vw;
+  text-align: center;
+  color: var(--fontbl);
+  font-weight: bold;
+  margin: 20px auto;
+}
+.pg3 h2 a {
+  margin: 30px auto;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  color: var(--fontbl);
+}
+/* footer design */
+footer {
+  height: 20vh;
+  width: 100vw;
+
+  background-color: var(--headerfooter);
+  color: var(--fontwh);
+}
+footer .logos {
+  width: 40vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+footer p {
+  text-align: center;
+}
+footer .logos img {
+  width: 50px;
+  margin: 20px 25px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 70vw;
+            height: 70vh;
+            margin: auto;
+            background-color: aqua;
+        }
+        .box{
+            width: 20vw;
+            height: 20vh;
+            background-color: rgb(94, 255, 0);
+            float: left;
+        }
+        .box2{
+            width: 20vw;
+            height: 20vh;
+            background-color: rgb(255, 145, 0);
+        }
+    </style>
+</head>
+<body>
+    <!-- floated element dont reserve its space  -->
+    <!-- clear: side just means that no floated element can be on that side -->
+    <div class="container">
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates nam sint consequuntur distinctio dicta dolore eius
+    quidem totam, voluptatem vitae magnam, et atque id assumenda aliquam rerum voluptatibus debitis culpa?</p>
+        <div class="box">
+           box 1
+        </div>
+        <div class="box2">
+            box 2
+        </div>
+    </div>
+</body>
+</html>

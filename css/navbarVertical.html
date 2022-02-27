@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #navigation {
+            width: 250px;
+            height: auto;
+            background-color: black;
+            margin: 12px 12px;
+            font-family: Ubuntu;
+            border-radius: 12px;
+        }
+
+        #lst {
+            overflow: auto;
+            height: 800px;
+            /* border: 4px solid red; */
+            /* padding-left: 0px; */
+            padding: auto;
+        }
+
+        .itms {
+            list-style: none;
+            margin: 12px 0px;
+            text-align: center;
+        }
+
+        #search {
+            margin-top: 12px;
+            margin-left: 25px;
+        }
+
+        #search input {
+            width: 150px;
+            border-radius: 20px;
+        }
+
+        #search input::placeholder {
+            color: black;
+            font-weight: bold;
+            font-family: Ubuntu;
+            padding-left: 12px;
+        }
+
+
+        .itms a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .itms a:hover {
+            color: red
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navigation">
+        <ul id="lst">
+            <div id="search">
+                <input type="text" id="search" placeholder="Search here">
+            </div>
+            <li class="itms"><a href="#">Home</a></li>
+            <li class="itms"><a href="#">About</a></li>
+            <li class="itms"><a href="#">Contact us</a></li>
+            <li class="itms"><a href="#">Nothing</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

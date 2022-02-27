@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .dv {
+            border: 2px solid red;
+            height: 60vh;
+            width: 50vw;
+            background-color: brown;
+            color: white;
+            margin: auto;
+        }
+
+        .bx {
+            border: 2px solid blue;
+            height: 30vh;
+            width: 20vw;
+            background-color: aqua;
+            color: black;
+            margin: auto;
+        }
+/* relative positioning */
+/* take position relative to its parent {{ does not effect any other element}} {{ bottom property will not work }} */
+        /* .bx { */
+            /*does not effect anything but top/bottom/l/r property will now work*/
+            /* position: relative;
+            top: 20vh;
+            bottom: 20vh; */
+        /* } */
+/* absolute positioning */
+/* take position relative to its first non-static member(ansester). other elements behave like it is not there and take their positions*/
+            /* .bx{
+                position: absolute;
+                
+            } */
+            
+
+    </style>
+</head>
+
+<body>
+    <h3>positionproperty</h3>
+    <div class="dv">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum fugit similique blanditiis aspernatur, soluta
+            tempore et consectetur ipsa. Beatae suscipit sapiente dignissimos. Itaque vero numquam nam eum, quasi odit
+            dolore.</p>
+            <div class="bx">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dignissimos ullam iusto! Numquam
+                    excepturi nobis alias distinctio inventore totam. Rerum adipisci illo facilis unde quod molestias nobis
+                    maiores eum exercitationem?</p>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum fugit similique blanditiis aspernatur, soluta
+                    tempore et consectetur ipsa. Beatae suscipit sapiente dignissimos. Itaque vero numquam nam eum, quasi odit
+                    dolore.</p>
+            </div>
+</body>
+
+</html>

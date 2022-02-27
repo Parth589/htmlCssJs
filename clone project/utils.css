@@ -1,0 +1,8 @@
+body{
+    overflow-x: hidden;
+}
+.flex_all_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

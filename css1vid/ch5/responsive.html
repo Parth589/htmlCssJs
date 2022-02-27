@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        /* the perfect resonsive header  */
+        header{
+            position: sticky;
+            top: 0;
+            background-color: black;
+            color: aliceblue;
+            padding: 3vh;
+            height: auto;
+        }
+        .itms{
+            list-style: none;
+            display: inline;
+            margin: auto 10px;
+            /* font-size: 5em; */
+            align-content: center;
+        }
+        /* the perfect resonsive header with items  */
+        .container{
+            /* overflow: scroll; */
+            width: 100%;
+            background-color: yellow;
+            height: 80vh;
+        }
+        footer{
+            background-color: rgb(0, 86, 161);
+            text-align: center;
+            height: 10vh;
+            padding-top: 6vh;
+        }
+        #btn{
+            height: 10vh;
+            width: 10vh;
+        }
+        #dvbtn{
+            position: fixed;
+            right: 5vh;
+            bottom: 5vh;
+        }
+        #btnimg{
+            width: 5vh;
+            height: 5vh;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <ul id="list">
+                <li class="itms">Home</li>
+                <li class="itms">About</li>
+                <li class="itms">Contact us</li>
+                <li class="itms">Nothing</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos possimus facere, nobis ex vitae porro ratione! Natus saepe ex illum, maiores totam beatae ratione esse sapiente numquam quod consequuntur doloremque sit, accusamus sed animi similique eligendi magnam. Sed cupiditate enim totam illum iste accusantium? Quo.</div>
+    <div id="dvbtn">
+        <button id="btn">
+            <img src="/css1vid/ch5/Google-Icon-PNG-768x768.jpg" alt="chat with us" id="btnimg">
+        </button>
+    </div>
+    <footer>
+        <p>Copyright &copy; void 2021-22</p>
+    </footer>
+</body>
+</html>

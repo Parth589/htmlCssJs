@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and after psudo selectors</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        body{
+            height: 100vh;
+            background-color: aqua;
+        }
+        .container{
+            width: 50vw;
+            height: 50vh;
+            margin:auto;
+            background-color: rgba(0, 0, 0, 0);
+            /* border: 2px solid red; */
+            color: rgb(255, 0, 0);
+        }
+        .bgimg{
+            float: left;
+            width: 100%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/img/bg/sarah-dorweiler-QeVmJxZOv3k-unsplash.jpg" alt="" class="bgimg">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, nihil, eius nisi minima esse omnis fugit rerum debitis maiores laborum possimus. Dolorum facilis nostrum voluptas a molestiae quis veritatis odio.
+    </div>
+</body>
+</html> 
+
+<!-- <!DOCTYPE html> -->
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            height: 50vh;
+            align-items: center;
+            background-color: black;
+        }
+        .itms{
+            height: 20vh;
+            width: 20vw;
+            background-color: aqua;
+            margin: 20px;
+            
+/* inset | offset-x | offset-y | color */
+box-shadow: inset 5em 1em gold;
+
+/* Any number of shadows, separated by commas */
+box-shadow: 3px 3px red, -1em 0 0.4em gold;
+/* same for text shadow */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="itms" id="itm-1">i1</div>
+        <div class="itms" id="itm-2">i2</div>
+        <div class="itms" id="itm-3">i3</div>
+    </div>
+</body>
+</html> -->

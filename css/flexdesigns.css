@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(207, 130, 15);
+}
+.container {
+  background-color: aliceblue;
+  margin: 20px auto;
+  width: 70vw;
+  min-height: 100px;
+  padding: 2em;
+}
+.itms {
+  /* Additional styling - Not part of even-columns */
+  background-color: rgb(189, 181, 181);
+  min-height: 30px;
+  outline: 1px solid rgb(46, 42, 42);
+}
+
+.even-columns {
+  display: flex;
+}
+.even-columns > * {
+  flex-basis: 100%;
+}
+
+.Dynamic-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Dynamic-grid > * {
+  /* an item can grow or shrink according to the width given to it */
+  flex-grow: 1;
+  flex-shrink: 1;
+  /* each box will try to be of 10em width */
+  flex-basis: 10em;
+}
+
+.static-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.static-grid > * {
+  /* grid of 3 columns */
+  flex-basis: 33%;
+  flex-wrap: wrap-reverse;
+}
+
+.content-sidebar {
+  display: flex;
+}
+.content-sidebar > *:nth-child(1) {
+  flex-basis: 70%;
+  min-width: 297px;
+}
+.content-sidebar > *:nth-child(2) {
+  flex-basis: 30%;
+  min-width: 200px;
+}

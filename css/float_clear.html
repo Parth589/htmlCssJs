@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float/Clear</title>
+    <style>
+        #dv {
+            /* width: 70%; */
+            margin: auto;
+            border: 2px solid black;
+            background-color: rgb(222, 247, 81);
+        }
+
+        .cntr {
+            box-sizing: border-box;
+            border: 2px solid red;
+            background-color: rgb(188, 253, 253);
+            /* margin: 20px; */
+            padding: 20px;
+            width: 50%;
+            text-align: center;
+        }
+
+        #itm1 {
+            float: left;
+            border-radius: 20px;
+        }
+
+        #itm2 {
+            /* if the item is placed next{{right}} to a float item it must  not to be cleared from the previous itm*/
+            /* clear: both; */
+
+            border-radius: 20px;
+            float: right;
+        }
+
+        #itm3 {
+            border-radius: 20px;
+            clear: both;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- float is to get content out of it's normal flow and put it in anywhere in it's boundary -->
+    <div id="dv">
+        <div id="itm1" class="cntr">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo fuga molestias totam blanditiis
+            voluptates rerum iure neque cumque. Error, praesentium.
+            <p>i1Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, odio!</p>
+        </div>
+        <div id="itm2" class="cntr">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo fuga molestias totam blanditiis
+            voluptates rerum iure neque cumque. Error, praesentium.
+            <p>i2Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, odio!</p>
+        </div>
+        <div id="itm3" class="cntr">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo fuga molestias totam blanditiis
+            voluptates rerum iure neque cumque. Error, praesentium.
+            <p>i3Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, odio!</p>
+        </div>
+    </div>
+</body>
+
+</html>

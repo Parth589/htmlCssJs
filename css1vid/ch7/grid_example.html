@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        .container {
+            background-color: red;
+            width: 70vw;
+            height: 70vh;
+            margin: auto;
+        }
+
+        .itms {
+            background-color: aqua;
+            border: 2px solid black;
+            width: auto;
+            height: auto;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: repeat (3,auto );
+            /*make all cells align center horizontally */
+            /* justify-content: center; */
+            /*make all cells align center vertically*/
+            /* align-content: center; */
+            /*{row gap}{ col gap} */
+            gap: 20px 30px;
+            /* make all cell items align center horizontally in their cells  */
+            /* justify-items: center; */
+        }
+        .i1{
+            grid-column: 2/4;
+        }
+        .i2{
+            grid-row: 1/3;
+        }
+        .i4{
+            /* grid-row: 2/4; */
+            /* or */
+            grid-row: 2/span 2;
+        }
+        .i3{
+            grid-column: 3/4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="itms i1">1</div>
+        <div class="itms i2">2</div>
+        <div class="itms i3">3</div>
+        <div class="itms i4">4</div>
+        <div class="itms i5">5</div>
+    </div>
+</body>
+
+</html>

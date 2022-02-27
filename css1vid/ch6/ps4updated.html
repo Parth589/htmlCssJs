@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* nav bar */
+        header {
+            background-color: black;
+            color: aqua;
+            position: sticky;
+            top: 0;
+        }
+
+        #lst {
+            list-style: none;
+            display: flex;
+            justify-content: end;
+            /*manages where the li items should go in the bar*/
+        }
+
+        .itms {
+            margin: 20px;
+            align-items: center;
+        }
+
+        #nav_usr_img {
+            margin: 10px;
+            width: 50px;
+            height: 50px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .usrimgnav {
+            justify-self: flex-start;
+        }
+
+        .itms a {
+            text-decoration: none;
+            color: aqua;
+        }
+
+        .itms a:visited {
+            color: aqua;
+        }
+
+        .itms a:active {
+            color: rgb(255, 123, 0);
+        }
+
+        .itms a:hover {
+            color: rgb(9, 255, 0);
+        }
+
+        /* container */
+
+        #bgimg {
+            width: 100%;
+            height: 40vh;
+            /* background-image; */
+        }
+
+        .dwnprt {
+            display: flex;
+            justify-content: center;
+            /* align-content: center; */
+            padding: 10%;
+            padding-top: 5%;
+            flex-wrap: wrap;
+        }
+
+        .dwnimg {
+            height: 20vh;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="navigation">
+            <a href="#" class=" usrimgnav">
+
+                <img src="/css1vid/ch6/User-Avatar-in-Suit-PNG.png" alt="User-Avatar-in-Suit-PNG" id="nav_usr_img">
+            </a>
+            <ul id="lst">
+                <li class="itms"><a href="https:/google.com">Home</a></li>
+                <li class="itms"><a href="https:/google.com">About</a></li>
+                <li class="itms"><a href="https:/google.com">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <img src="/css1vid/ch6/istockphoto-1248542684-612x612.jpg"
+            alt="pngtree-modern-double-color-futuristic-neon-background-image_351866" id="bgimg">
+        <div class="dwnprt">
+            <img src="/css1vid/ch6/User-Avatar-in-Suit-PNG.png" alt="/css1vid/ch6/User-Avatar-in-Suit-PNG.png"
+                class="dwnimg"><img src="/css1vid/ch6/User-Avatar-in-Suit-PNG.png"
+                alt="/css1vid/ch6/User-Avatar-in-Suit-PNG.png" class="dwnimg"><img
+                src="/css1vid/ch6/User-Avatar-in-Suit-PNG.png" alt="/css1vid/ch6/User-Avatar-in-Suit-PNG.png"
+                class="dwnimg"><img src="/css1vid/ch6/User-Avatar-in-Suit-PNG.png"
+                alt="/css1vid/ch6/User-Avatar-in-Suit-PNG.png" class="dwnimg">
+        </div>
+    </div>
+</body>
+
+</html>

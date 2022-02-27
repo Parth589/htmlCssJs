@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.pgs {
+  height: 100vh;
+  outline: 2px solid red;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: rgba(29, 250, 0, 0.116);
+  z-index: 5;
+}
+nav {
+  display: flex;
+  min-height: 60px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav > *:nth-child(1) {
+  /* Logo */
+  flex-basis: 30%;
+  text-align: center;
+  cursor: none;
+  font-family: 'Allura', cursive;
+  font-size: 2rem;
+}
+nav > *:nth-child(2) {
+  font-family: 'Poppins', sans-serif;
+  flex-basis: 50%;
+}
+nav > *:nth-child(3) {
+  /* Signup button */
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-basis: 20%;
+  padding: 20px;
+  border-radius: 20px;
+  height: 40px;
+  width: 50px;
+}
+
+#signup a {
+  padding: 5px 20px;
+  outline: 2px solid red;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav > ul > * {
+  text-align: center;
+  flex-basis: 20%;
+  cursor: pointer;
+}
+header {
+  color: white;
+}
+nav > ul > li:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+/* contact -widget */
+#contact-widget {
+  position: fixed;
+  display: flex;
+  background-color: rgba(0, 128, 0, 0.301);
+  flex-direction: column;
+  padding: 20px;
+  z-index: 5;
+  right: 0;
+  top: 50%;
+  bottom: 50%;
+  height: max-content;
+  border-radius: 10px;
+  gap: 20px;
+}
+#contact-widget > img {
+  width: 25px;
+}
+
+/* pg1 */
+#pg1::before {
+  content: '';
+  background-image: url('/media/pg1/bgimage.png');
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  opacity: 0.2;
+  /* will change to some visible bg image  */
+}
+#pg1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}

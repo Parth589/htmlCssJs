@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        background-color: aqua;
+        width: 80%;
+        margin: auto;
+        display: grid;
+        /* grid-template-columns: 1fr 1fr 1fr;  */
+        /* best for responsiveness */
+        /* 300px is the minimum and 1fr(1 fraction-> all column will maintain ratio of 1:1) is maximum  width of columns */
+        /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+        /* assign space for relevent grid areas { grid area property is a special name used by grid to identify }*/
+        /* grid-template-areas can be changed by a media query making it more easy to design
+         */
+        /* grid-template-areas:
+          "navbar navbar navbar navbar"
+          "section section section aside"
+          "footer footer footer footer "; */
+      }
+      .box {
+        background-color: blanchedalmond;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="box">i am box1</div>
+      <div class="box">i am box2</div>
+      <div class="box">i am box3</div>
+      <div class="box">i am box4</div>
+      <div class="box">i am box5</div>
+      <div class="box">i am box6</div>
+      <div class="box">i am box7</div>
+      <div class="box">i am box8</div>
+      <div class="box">i am box9</div>
+      <div class="box">i am box10</div>
+    </div>
+  </body>
+</html>

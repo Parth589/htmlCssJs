@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid header</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            /* border: 2px solid red; */
+            display: grid;
+            grid-template-rows: 10vh auto;
+            grid-template-columns: auto auto auto;
+            width: 100vw;
+            height: 100vh;
+        }
+        header{
+            grid-column: 1/4;
+            background-color: black;
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+        .c1{
+            background-color: aqua;
+        }
+        .c2{
+            background-color:cadetblue;
+        }
+        .c3{
+            background-color: aquamarine;
+        }
+        .itms{
+            display: inline;
+            margin: 20px;
+        }
+        #lst{
+            list-style: none;
+        }
+        nav{
+            margin: 4vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul id="lst">
+                    <li class="itms">Home</li>
+                    <li class="itms">About</li>
+                    <li class="itms">Contact</li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content c1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cumque commodi eum natus assumenda rem
+                nemo fugiat dicta ad veritatis quis eaque aspernatur sit, dignissimos quia sequi deserunt! Eius, cum?
+            </p>
+        </div>
+        <div class="content c2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cumque commodi eum natus assumenda rem
+                nemo fugiat dicta ad veritatis quis eaque aspernatur sit, dignissimos quia sequi deserunt! Eius, cum?
+            </p>
+        </div>
+        <div class="content c3">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis cumque commodi eum natus assumenda rem
+                nemo fugiat dicta ad veritatis quis eaque aspernatur sit, dignissimos quia sequi deserunt! Eius, cum?
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

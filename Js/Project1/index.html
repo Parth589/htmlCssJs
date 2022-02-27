@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul id="nav_itms_lst">
+          <li class="nav-itms">
+            <img
+              src="/res/istockphoto-1325103413-612x612.jpg"
+              alt="logo"
+              id="logo-img"
+            />
+          </li>
+          <li class="nav-itms" id="brand_name">Magic Notes</li>
+          <li
+            class="nav-itms pgs"
+            style="
+              border: 2px solid #adefd1ff;
+              border-radius: 5px;
+              padding: 10px;
+            "
+          >
+            Home
+          </li>
+          <li class="nav-itms pgs" id="search_box">
+            <label for="search">Search Your Notes:</label>
+            <input type="text" id="search" />
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div id="add">
+          <label for="txtarea" id="lbl_add">Enter Your Note here:</label>
+          <textarea name="txtarea" id="add_txt" cols="30" rows="10"> </textarea>
+          <button id="addntbtn">Add</button>
+        </div>
+        <div id="collection">
+          <h1>Your saved notes:</h1>
+        </div>
+      </div>
+    </main>
+    <footer><p>Copyright &copy; 2021-22. All rights reserved.</p></footer>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

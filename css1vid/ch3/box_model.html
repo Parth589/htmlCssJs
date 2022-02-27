@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .a1 {
+            border: 2px solid red;
+            margin: auto 25%;/* y x*/
+            margin: auto 25% auto 25%;/*top right bottom left */
+            padding: 20px;
+            margin: 20px;
+        }
+        .a{
+            box-sizing: border-box;/* the width specified will be the actal width border and padding will be included in width but {{{{{{{margin is excluded}}}}}}}*/
+            border: 2px solid green;
+            width: 50%;
+            margin: 20px;/*margin overlapping*/
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a" id="box1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis possimus, corrupti dicta odio iusto a provident
+        porro inventore quod, amet fugit rem assumenda, nostrum modi nam perspiciatis ut explicabo minima?
+        <div id="dv" class="a1">
+            i am noob
+        </div>
+    </div>
+    <div class="a1" id="box2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis provident assumenda, hic itaque distinctio
+        commodi aut! Voluptas neque aut architecto dolor culpa nobis libero consectetur temporibus eum hic! Quam, illum!
+    </div>
+</body>
+
+</html>

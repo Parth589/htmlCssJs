@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            background-color: aqua;
+        }
+
+        .box img {
+            width: 10vw;
+        }
+        .box{
+            width: 10vw;
+            margin: 50% auto;
+            animation: rotateimage 5s   6 ;
+        }
+        @keyframes rotateimage {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="/css1vid/ch8/white-round-banner-design-on-transparent-background-PNG.png"
+                alt="logo">
+        </div>
+    </div>
+</body>
+
+</html>
