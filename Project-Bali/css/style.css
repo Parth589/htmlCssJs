@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+::selection {
+  background-color: lightgreen;
+  color: black;
+}
 * {
   margin: 0;
   padding: 0;
@@ -50,12 +54,14 @@ nav > *:nth-child(3) {
 
 #signup a {
   padding: 5px 20px;
-  outline: 2px solid red;
+
   border-radius: 10px;
   text-decoration: none;
-  color: white;
+  color: black;
 }
-
+#signup a:hover {
+  outline: 3px solid black;
+}
 nav > ul {
   display: flex;
   flex-wrap: wrap;
@@ -65,9 +71,7 @@ nav > ul > * {
   text-align: center;
   flex-basis: 20%;
   cursor: pointer;
-}
-header {
-  color: white;
+  height: 100%;
 }
 nav > ul > li:hover {
   text-decoration: underline;
@@ -86,7 +90,9 @@ nav > ul > li:hover {
   top: 50%;
   bottom: 50%;
   height: max-content;
-  border-radius: 10px;
+  border-radius: 15px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
   gap: 20px;
 }
 #contact-widget > img {
@@ -100,11 +106,11 @@ nav > ul > li:hover {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
   height: 100%;
   width: 100%;
   background-size: cover;
-  opacity: 0.2;
+  opacity: 0.5;
   /* will change to some visible bg image  */
 }
 #pg1 {
@@ -114,4 +120,30 @@ nav > ul > li:hover {
   gap: 20px;
   justify-content: center;
   align-items: center;
+}
+#pg1 > * {
+  z-index: 2;
+}
+#pg1 > h1 {
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+}
+#pg1 > p {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  color: gray;
+}
+#info {
+  background-color: rgba(144, 238, 144, 0.342);
+  padding: 20px;
+}
+#info > * {
+  padding: 10px;
+  border-radius: 5px;
+  border: 0;
+}
+#info > input:focus {
+  /* border: 0; */
+  outline: 2px solid gray;
 }
