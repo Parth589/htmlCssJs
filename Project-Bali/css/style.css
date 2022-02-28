@@ -10,72 +10,100 @@
   box-sizing: border-box;
 }
 .pgs {
-  height: 100vh;
+  min-height: 100vh;
   outline: 2px solid red;
 }
+/* navigation */
+
 header {
   position: fixed;
   width: 100%;
   top: 0;
   background-color: rgba(29, 250, 0, 0.116);
   z-index: 5;
+  /* padding: 0 50px; */
 }
+
 nav {
   display: flex;
   min-height: 60px;
   align-items: center;
   flex-wrap: wrap;
+  gap: 10vw;
+  row-gap: 10px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.logo > img {
+  width: 70vw;
+}
+@media screen and (min-width: 480px) {
+  .logo > img {
+    width: 350px;
+  }
 }
 nav > *:nth-child(1) {
   /* Logo */
-  flex-basis: 30%;
-  text-align: center;
   cursor: none;
   font-family: 'Allura', cursive;
   font-size: 2rem;
 }
 nav > *:nth-child(2) {
   font-family: 'Poppins', sans-serif;
-  flex-basis: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 20px;
+}
+@media screen and (max-width: 460px) {
+  nav {
+    flex-direction: column;
+  }
+  nav > *:nth-child(2) {
+    flex-direction: column;
+  }
+  nav > *:nth-child(2) > * {
+    text-align: center;
+  }
 }
 nav > *:nth-child(3) {
   /* Signup button */
   font-family: 'Poppins', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-basis: 20%;
-  padding: 20px;
   border-radius: 20px;
-  height: 40px;
-  width: 50px;
 }
-
-#signup a {
+#signup {
+  display: flex;
+  justify-content: center;
   padding: 5px 20px;
-
+  margin: 5px 0;
+  min-width: 132px;
+}
+#signup a {
+  flex: 1 1 100%;
+  padding: 5px 20px;
   border-radius: 10px;
   text-decoration: none;
   color: black;
+  outline: 0;
 }
 #signup a:hover {
   outline: 3px solid black;
 }
 nav > ul {
-  display: flex;
-  flex-wrap: wrap;
   list-style: none;
 }
 nav > ul > * {
-  text-align: center;
-  flex-basis: 20%;
   cursor: pointer;
   height: 100%;
 }
 nav > ul > li:hover {
   text-decoration: underline;
   color: black;
+  background-color: aquamarine;
 }
 
 /* contact -widget */
@@ -98,7 +126,8 @@ nav > ul > li:hover {
 #contact-widget > img {
   width: 25px;
 }
-
+/* responsive code ended  */
+/* not to care about */
 /* pg1 */
 #pg1::before {
   content: '';
