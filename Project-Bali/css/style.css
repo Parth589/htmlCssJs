@@ -14,98 +14,72 @@
   outline: 2px solid red;
 }
 /* navigation */
-
 header {
-  position: fixed;
+  z-index: 999;
+  background-color: rgba(144, 238, 144, 0.7);
+  position: sticky;
   width: 100%;
   top: 0;
-  background-color: rgba(29, 250, 0, 0.116);
-  z-index: 5;
-  /* padding: 0 50px; */
-}
-
-nav {
+  overflow: hidden;
   display: flex;
-  min-height: 60px;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10vw;
-  row-gap: 10px;
-}
-.logo {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 20px;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em 0;
+  font-family: 'Poppins', sans-serif;
+}
+header > input {
+  display: none;
+}
+header > label {
+  padding-bottom: 0.5em;
+}
+header > input:checked ~ nav,
+nav > * {
+  display: flex;
+  flex-direction: column;
+  position: inherit;
+  top: 0;
 }
 .logo > img {
-  width: 70vw;
+  width: min(70vw, 400px);
+  margin: 1em 0;
 }
-@media screen and (min-width: 480px) {
-  .logo > img {
-    width: 350px;
-  }
-}
-nav > *:nth-child(1) {
-  /* Logo */
-  cursor: none;
-  font-family: 'Allura', cursive;
-  font-size: 2rem;
-}
-nav > *:nth-child(2) {
-  font-family: 'Poppins', sans-serif;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
-  gap: 20px;
-}
-@media screen and (max-width: 460px) {
-  nav {
-    flex-direction: column;
-  }
-  nav > *:nth-child(2) {
-    flex-direction: column;
-  }
-  nav > *:nth-child(2) > * {
-    text-align: center;
-  }
-}
-nav > *:nth-child(3) {
-  /* Signup button */
-  font-family: 'Poppins', sans-serif;
-  border-radius: 20px;
-}
-#signup {
-  display: flex;
+nav {
+  display: none;
   justify-content: center;
-  padding: 5px 20px;
-  margin: 5px 0;
-  min-width: 132px;
-}
-#signup a {
-  flex: 1 1 100%;
-  padding: 5px 20px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: black;
-  outline: 0;
-}
-#signup a:hover {
-  outline: 3px solid black;
+  align-items: center;
+  gap: 2em;
 }
 nav > ul {
-  list-style: none;
-}
-nav > ul > * {
-  cursor: pointer;
-  height: 100%;
-}
-nav > ul > li:hover {
-  text-decoration: underline;
-  color: black;
-  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  gap: 2em;
 }
 
+/* responsiveness done */
+/* styling and hover effects */
+#signup > * {
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 0 5px;
+}
+nav > ul > *:hover {
+  font-weight: bold;
+  font-size: large;
+  text-decoration: underline;
+}
+#signup > *:hover {
+  font-weight: bold;
+  font-size: large;
+  text-decoration: none;
+}
+#signup > *:visited {
+  border: 2px solid grey;
+}
 /* contact -widget */
 #contact-widget {
   position: fixed;
@@ -125,6 +99,20 @@ nav > ul > li:hover {
 }
 #contact-widget > img {
   width: 25px;
+}
+@media screen and (min-width: 1220px) {
+  header > label {
+    display: none;
+  }
+  header {
+    flex-direction: row;
+    justify-content: sp;
+  }
+  nav,
+  nav > * {
+    display: flex;
+    flex-direction: row;
+  }
 }
 /* responsive code ended  */
 /* not to care about */
@@ -150,20 +138,34 @@ nav > ul > li:hover {
   justify-content: center;
   align-items: center;
 }
-#pg1 > * {
+#content {
+  padding: 0 20px;
+  margin: 10vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+#content > * {
   z-index: 2;
 }
-#pg1 > h1 {
+#content > h1 {
   font-size: 3rem;
   font-family: 'Poppins', sans-serif;
 }
-#pg1 > p {
+#content > p {
   font-family: 'Poppins', sans-serif;
   text-align: center;
   font-weight: bold;
   color: gray;
 }
 #info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
   background-color: rgba(144, 238, 144, 0.342);
   padding: 20px;
 }
@@ -175,4 +177,6 @@ nav > ul > li:hover {
 #info > input:focus {
   /* border: 0; */
   outline: 2px solid gray;
+}
+@media screen and (max-width: 1220px) {
 }
