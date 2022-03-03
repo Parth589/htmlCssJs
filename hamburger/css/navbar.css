@@ -1,0 +1,10 @@
+#header {
+}
+#all-visible {
+  display: flex;
+  justify-content: space-around;
+}
+
+header > #all-visible > input:checked + header > #some-visible > nav {
+  display: none;
+}

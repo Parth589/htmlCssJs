@@ -34,6 +34,7 @@ header > input {
 header > label {
   padding-bottom: 0.5em;
 }
+
 header > input:checked ~ nav,
 nav > * {
   display: flex;
