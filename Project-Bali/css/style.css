@@ -7,116 +7,31 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 .pgs {
   min-height: 100vh;
+  width: 100vw;
   outline: 2px solid red;
 }
-/* navigation */
-header {
-  z-index: 999;
-  background-color: rgba(144, 238, 144, 0.7);
-  position: sticky;
-  width: 100%;
-  top: 0;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 1em 0;
-  font-family: 'Poppins', sans-serif;
-}
-header > input {
-  display: none;
-}
-header > label {
-  padding-bottom: 0.5em;
-}
-
-header > input:checked ~ nav,
-nav > * {
-  display: flex;
-  flex-direction: column;
-  position: inherit;
-  top: 0;
-}
-.logo > img {
-  width: min(70vw, 400px);
-  margin: 1em 0;
-}
-nav {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  gap: 2em;
-}
-nav > ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style-type: none;
-  gap: 2em;
-}
-
-/* responsiveness done */
-/* styling and hover effects */
-#signup > * {
-  text-decoration: none;
-  border: 2px solid black;
-  border-radius: 10px;
-  padding: 0 5px;
-}
-nav > ul > *:hover {
-  font-weight: bold;
-  font-size: large;
-  text-decoration: underline;
-}
-#signup > *:hover {
-  font-weight: bold;
-  font-size: large;
-  text-decoration: none;
-}
-#signup > *:visited {
-  border: 2px solid grey;
-}
-/* contact -widget */
+/* contact widget */
 #contact-widget {
   position: fixed;
-  display: flex;
-  background-color: rgba(0, 128, 0, 0.301);
-  flex-direction: column;
-  padding: 20px;
-  z-index: 5;
   right: 0;
   top: 50%;
   bottom: 50%;
-  height: max-content;
-  border-radius: 15px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  gap: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+  z-index: 99;
+  width: 100px;
+  background-color: red;
+  border-radius: 10px;
 }
 #contact-widget > img {
-  width: 25px;
+  width: 30px;
 }
-@media screen and (min-width: 1220px) {
-  header > label {
-    display: none;
-  }
-  header {
-    flex-direction: row;
-    justify-content: sp;
-  }
-  nav,
-  nav > * {
-    display: flex;
-    flex-direction: row;
-  }
-}
-/* responsive code ended  */
-/* not to care about */
 /* pg1 */
 #pg1::before {
   content: '';
@@ -178,6 +93,4 @@ nav > ul > *:hover {
 #info > input:focus {
   /* border: 0; */
   outline: 2px solid gray;
-}
-@media screen and (max-width: 1220px) {
 }

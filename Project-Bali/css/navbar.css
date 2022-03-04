@@ -3,6 +3,7 @@
   /* color for whole navigation bar */
 }
 #header {
+  z-index: 999;
   background-color: var(--navigationBackground);
   display: grid;
   /* menu list is in center. can be modified (well-tested) */
@@ -20,7 +21,7 @@
   width: 100%;
 }
 #logoImage {
-  width: 40px;
+  width: 80%;
   margin: 5px;
   grid-area: logo;
 }
@@ -29,12 +30,12 @@
 }
 label[for='checkbox'] {
   /* width: 100%; */
-  justify-self: right;
+  justify-self: center;
   grid-area: trigger;
 }
 label[for='checkbox'] > span > img {
   width: 25px;
-  margin-right: 2em;
+  /* margin-right: 2em; */
 }
 #some-visible {
   width: 100%;
@@ -75,6 +76,6 @@ label[for='checkbox'] > span > img {
   height: calc(100vh - 50px - 1em);
   /* background-color: var(--navigationBackground); */
 }
-#checkbox:checked {
+/* #checkbox:checked {
   display: unset;
-}
+} */
