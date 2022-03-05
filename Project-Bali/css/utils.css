@@ -1,5 +1,28 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+::selection {
+  background-color: lightgreen;
+  color: black;
+}
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.pgs {
+  min-height: 90vh;
+  /* min-height: calc(100vh - 137.283px); */
+
+  width: 100%;
+  outline: 2px solid red;
+}
+/* unselectable content */
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }

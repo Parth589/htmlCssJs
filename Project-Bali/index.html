@@ -10,21 +10,26 @@
     <title>Bali - The One stop Destination For Travelling Lovers</title>
     <link rel="stylesheet" href="/css/utils.css" />
     <link rel="stylesheet" href="/css/navbar.css" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/pg1.css" />
   </head>
   <body>
     <!-- navigation bar template -->
     <header id="header">
       <!-- image for logo -->
-      <img src="/media/logo/Explore The world.svg" alt="logo" id="logoImage" />
-      <label for="checkbox">
+      <img
+        src="/media/logo/Explore The world.svg"
+        alt="logo"
+        id="logoImage"
+        class="unselectable"
+      />
+      <label for="checkbox" class="unselectable">
         <span>
           <!-- image on the hamburger trigger -->
           <img src="/media/navbar/list.svg" alt="" id="menu-trigger" />
         </span>
       </label>
-      <input type="checkbox" name="chk" id="checkbox" />
-      <div id="some-visible">
+      <input type="checkbox" name="chk" id="checkbox" value="unchecked" />
+      <div id="some-visible" class="unselectable">
         <nav id="navbar">
           <ul id="list">
             <li><a href="#">Home</a></li>
@@ -38,7 +43,7 @@
       </div>
     </header>
     <main>
-      <div id="contact-widget">
+      <div id="contact-widget" class="unselectable">
         <img src="/media/contactWidget/wp-fill.svg" alt="" />
         <img src="/media/contactWidget/insta-fill.svg" alt="" />
         <img src="/media/contactWidget/twtr-fill.svg" alt="" />

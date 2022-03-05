@@ -21,9 +21,24 @@
   width: 100%;
 }
 #logoImage {
-  width: 80%;
+  animation: fadeup 2s ease-in-out 1 forwards;
+
+  width: clamp(50vw, 250px, 100%);
+  width: 50%;
+  min-width: 20vw;
+  /* width: max(100%, 50vw); */
   margin: 5px;
   grid-area: logo;
+}
+@media screen and (max-width: 615px) {
+  #logoImage {
+    width: 70vw;
+  }
+}
+@media only screen and (min-width: 615px) and (max-width: 1000px) {
+  #logoImage {
+    width: 100%;
+  }
 }
 #checkbox {
   display: none;
@@ -51,18 +66,22 @@ label[for='checkbox'] > span > img {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
+
   font-size: 1.3rem;
   gap: 2rem;
   flex-direction: column;
 }
 #list > li:hover {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   text-decoration: underline;
+  font-weight: bold;
   /* padding: 5px; */
 }
 #list > li {
   width: max-content;
+  animation: fadeup 2s ease-in-out 1 forwards;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 #list > li > a {
   /* font-size: 1.5rem; */
@@ -73,9 +92,51 @@ label[for='checkbox'] > span > img {
 #checkbox:checked ~ #some-visible {
   display: flex;
   justify-content: center;
-  height: calc(100vh - 50px - 1em);
+  animation: nav-down 2s 1;
+  animation-fill-mode: forwards;
+  /* height: calc(100vh - 50px - 1em); */
   /* background-color: var(--navigationBackground); */
 }
 /* #checkbox:checked {
   display: unset;
 } */
+
+/* for desktops */
+@media screen and (min-width: 1000px) {
+  #header {
+    grid-template-areas: 'logo logo list';
+    min-height: 100px;
+  }
+  #list {
+    flex-direction: row;
+    justify-content: center;
+    padding-right: 2em;
+  }
+  label[for='checkbox'] {
+    display: none;
+  }
+  #some-visible {
+    display: flex;
+    justify-content: center;
+    animation: none !important;
+    /* height: calc(100vh - 50px - 1em); */
+  }
+}
+/* animations defination */
+/* navigation window come down */
+@keyframes nav-down {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: calc(100vh - 50px - 1em);
+  }
+}
+@keyframes fadeup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

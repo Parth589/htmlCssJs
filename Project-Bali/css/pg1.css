@@ -1,36 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-::selection {
-  background-color: lightgreen;
-  color: black;
-}
-* {
-  margin: 0;
-  padding: 0;
-  /* box-sizing: border-box; */
-}
-.pgs {
-  min-height: 100vh;
-  width: 100vw;
-  outline: 2px solid red;
-}
 /* contact widget */
 #contact-widget {
   position: fixed;
   right: 0;
-  top: 50%;
+  top: 30%;
   bottom: 50%;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 1em;
   z-index: 99;
-  width: 100px;
-  background-color: red;
-  border-radius: 10px;
+  width: 80px;
+  height: max-content;
+  padding: 2em 0;
+  background-color: rgba(144, 238, 144, 0.342);
+  border-radius: 0;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 #contact-widget > img {
   width: 30px;
+}
+@media screen and (max-width: 880px) {
+  #contact-widget {
+    display: none;
+  }
 }
 /* pg1 */
 #pg1::before {
@@ -91,6 +84,5 @@
   border: 0;
 }
 #info > input:focus {
-  /* border: 0; */
   outline: 2px solid gray;
 }
