@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* .container {
+  outline: 2px solid red;
+  min-height: 500px;
+  min-width: 500px;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.itms {
+  flex-shrink: 0;
+  flex-grow: 0;
+  height: 400px;
+  width: 400px;
+  outline: 2px solid black;
+} */
+
+/* 2.container have not the full width */
+/* .grandContainer {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  border: 3px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 500px;
+  height: 500px;
+  border: 2px solid red;
+  display: flex;
+  overflow-x: scroll;
+  align-items: center;
+  overflow-y: hidden;
+  gap: 2em;
+  padding: 0 2em 0 2em;
+}
+.itms {
+  flex-shrink: 0;
+  flex-grow: 0;
+  height: 350px;
+  width: 400px;
+  outline: 2px solid black;
+} */
+
+/* 3.container have not the full width(+ animations) */
+.grandContainer {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  border: 3px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 500px;
+  height: 500px;
+  border: 2px solid red;
+  display: flex;
+  overflow-x: auto;
+  /* justify-content: center; */
+  align-items: center;
+  overflow-y: hidden;
+  gap: 2em;
+  padding: 0 2em 0 2em;
+  position: relative;
+}
+.itms {
+  flex-shrink: 0;
+  flex-grow: 0;
+  height: 150px;
+  width: 200px;
+  outline: 2px solid black;
+  /* z-index: 88; */
+}
+.btn {
+  z-index: 5;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  /* left: 0;
+  right: 0;
+  bottom: 0; */
+}
+.ritbtn {
+  right: 0;
+}
+.lftbtn {
+  left: 0;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
