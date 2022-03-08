@@ -63,6 +63,3 @@ addNoteBtn.addEventListener('click', function () {
 });
 // flow of code
 // startup();
-for (let i = 0; i < 8; i++) {
-  console.log('hello world');
-}
