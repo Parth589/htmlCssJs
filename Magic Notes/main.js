@@ -24,14 +24,13 @@ function startup() {
 }
 // add a note
 let addNoteBtn = document.getElementById('add-note-button');
-
 addNoteBtn.addEventListener('click', function () {
   let body = document.querySelector('body');
   let titleBox = document.getElementById('titleBox');
   let noteBox = document.getElementById('noteBox');
   console.log(noteBox);
   if (titleBox.value != '' && noteBox.value != '') {
-    //   add visually
+    //  add visually
     body.innerHTML = body.innerHTML.concat(` 
       <div class="card" style="width: 18rem">
         <div class="card-body">
@@ -62,3 +61,8 @@ addNoteBtn.addEventListener('click', function () {
     }
   }
 });
+// flow of code
+// startup();
+for (let i = 0; i < 8; i++) {
+  console.log('hello world');
+}
