@@ -99,16 +99,20 @@ addNoteBtn.addEventListener('click', function () {
   noteTxtArea.value = '';
 });
 
-//delete btns in every card--> working partially
 /*
+TODO : make all delete note btns work properly
+*/
+
+//delete btns in every card--> working partially
+
 let btnArray = document.querySelectorAll('.deleteMeBtn');
 Array.from(btnArray).forEach((element) => {
   element.addEventListener('click', function () {
     console.log(element);
     let newArray = JSON.parse(localStorage.getItem('notes'));
 
-    newArray.splice(element.id, 1);
+    newArray.splice(Number(element.id.substring(6)), 1);
     localStorage.setItem('notes', JSON.stringify(newArray));
-    // refresh();
+    refresh();
   });
-});*/
+});

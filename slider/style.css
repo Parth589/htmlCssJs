@@ -87,17 +87,25 @@
   transition: width 2s ease;
 }
 .itms:hover {
-  animation: roll 2s linear 1;
-  width: 500px;
+  animation: roll 4s ease-in-out infinite forwards;
+  /* box-shadow: 2px 2px blue; */
+  /* box-shadow: -20px -20px blue inset; */
+  /* width: 500px; */
 }
 @keyframes roll {
   0% {
-    transform: rotateZ(0deg);
+    /* width: 300px; */
+    /* border: 0px solid red; */
+    /* transform: rotateZ(0deg); */
   }
   50% {
-    transform: rotateZ(180deg);
+    /* width: 500px; */
+    /* border: 10px solid red; */
+    /* transform: rotateZ(180deg); */
   }
   100% {
-    transform: rotateZ(360deg);
+    /* border: 0px solid red; */
+    /* width: 300px; */
+    /* transform: rotateZ(360deg); */
   }
 }

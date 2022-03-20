@@ -1,8 +1,11 @@
-body{
-    overflow-x: hidden;
+html {
+  scroll-behavior: smooth;
 }
-.flex_all_center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  overflow-x: hidden;
+}
+.flex_all_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
