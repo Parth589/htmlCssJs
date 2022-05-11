@@ -60,13 +60,13 @@ function _DisplayNotesByArray(noteArray) {
     let container = _emptyCardContainerUI();
     noteArray.forEach(element => {
         container.innerHTML += `
-            <div class="card" style="width: 18rem; id="_${element.primaryKey}">
+            <div class="card" style="width: 18rem;" id="_${element.primaryKey}">
                 <div class="card-body">
                     <h5 class="card-title">${element.title}</h5>
                     <p class="card-text">
                         ${element.note}
                     </p>
-                    <a href="#" class="btn btn-primary" id="${element.primaryKey}">Delete now</a>
+                    <a href="#" class="btn btn-primary dltBtn" onclick ="deleteThis(this.id)" id="${element.primaryKey}">Delete now</a>
                 </div>
             </div>`;
     });
@@ -79,11 +79,9 @@ function _emptyCardContainerUI() {
 
 function _search() {
     string = search.value;
-    console.log("change event fired", string);
     // assuming that all notes are synced 
     let container = document.querySelector(".cardContainer");
     Array.from(container.children).forEach(element => {
-        console.log(element);
         if (element.innerText.includes(string)) {
             element.style.display = "block";
         }
@@ -118,14 +116,22 @@ function _addCurrNote() {
     let title = document.getElementById("titleBox");
     let note = document.getElementById("noteBox");
     if (title.value == "" || note.value == "") {
-        alert("valid value required!");
+        // when a user adds invalid note give a reminder about that and move away
+        notification.style.display = "flex";
+        setTimeout(() => {
+            notification.style.display = "none";
+
+        }, 3000);
+
         return;
     }
     let obj = new noteClass();
     obj.title = title.value;
     obj.note = note.value;
     title.value = ""; note.value = "";
-    obj.primaryKey;// for future me.
+    obj.primaryKey = NOTEcOUNT.toString();
+    NOTEcOUNT++;
+    console.info(NOTEcOUNT);
     //adding object to the local storage
     let noteArray = localStorage.getItem("HT52VB");
     if (noteArray !== null) {
@@ -140,15 +146,15 @@ function _addCurrNote() {
     }
 
     let container = document.querySelector(".cardContainer");
-    console.log(container);
+    console.table(obj);
     container.innerHTML += `
-            <div class="card" style="width: 18rem; id="_${obj.primaryKey}">
+            <div class="card" style="width: 18rem;" id= "_${obj.primaryKey}">
                 <div class="card-body">
                     <h5 class="card-title">${obj.title}</h5>
                     <p class="card-text">
                         ${obj.note}
                     </p>
-                    <a href="#" class="btn btn-primary" id="${obj.primaryKey}">Delete now</a>
+                    <a href="#" class="btn btn-primary dltBtn" onclick="deleteThis(this.id)" id="${obj.primaryKey}">Delete now</a>
                 </div>
             </div>`;
 }
@@ -159,17 +165,104 @@ function _addCurrNote() {
 
 */
 start();
+{
+    let notesArray = localStorage.getItem("HT52VB");
+    var NOTEcOUNT = 0;
+    if (notesArray !== null) {
+        NOTEcOUNT = JSON.parse(notesArray).length;
+    }
+}
+/* Alerts are handeled here */
+let notification = document.getElementById("notification");
+notification.style.display = "none";
+
+
 /* non-repeating event listners are not enclosed by function */
 let search = document.getElementById("searchBox");
 search.addEventListener("input", _search);
-search.addEventListener("blur", function () {
-    search.value = "";
-    let container = document.querySelector(".cardContainer");
-    Array.from(container.children).forEach(element => {
-        element.style.display = "block";
-    });
-});
+// search.addEventListener("blur", function () {
+//     search.value = "";
+//     let container = document.querySelector(".cardContainer");
+//     Array.from(container.children).forEach(element => {
+//         element.style.display = "block";
+//     });
+// });
 
 // add note button
 let addbtn = document.getElementById("addNoteBtn");
 addbtn.addEventListener("click", _addCurrNote);
+
+
+// delete button functionallity
+function deleteThis(string) {
+    //id of delete button is passed as argument which is of string type 
+    console.log(string, typeof string);
+
+    let primaryKey = string;
+    let array = localStorage.getItem("HT52VB");
+    if (array !== null) {
+        array = JSON.parse(array);
+        let index = -1;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i].primaryKey === primaryKey) {
+                index = i;
+                console.log("Note found at index ", index, " From array : ", array);
+                break;
+            }
+        }
+        array.splice(index, 1);
+        localStorage.setItem("HT52VB", JSON.stringify(array));
+        _DisplayNotesByArray(array);
+    }
+    else {
+        console.warn("Something strange happened");
+        alert("Something went wrong");
+    }
+}
+/*
+Not working code:
+function deleteThis(primaryKey) {
+    let array = localStorage.getItem("HT52VB");
+    if (array !== null) {
+        array = JSON.parse(array);
+        let index = -1;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i].primaryKey === primaryKey) {
+                index = i;
+                break;
+            }
+        }
+        array.splice(index, 1);
+    }
+    else {
+        console.warn("Something strange happened");
+        alert("Something went wrong");
+    }
+}
+*/
+// let dltBtns = Array.from(document.querySelectorAll(".dltBtn"));
+// dltBtns.forEach(element => {
+//     element.addEventListener("click", function () {
+
+//         let dltCard = document.getElementById(`_${element.id}`);
+//         dltCard.style.display = "none";
+//         let array = localStorage.getItem("HT52VB");
+//         if (array !== null) {
+//             array = JSON.parse(array);
+//             // finding the desired object in array
+//             let index = -1;
+//             for (let i = 0; i < array.length; i++) {
+
+//                 if (array[i].primaryKey === element.id) {
+//                     index = i;
+//                     break;
+//                 }
+//             }
+//             array.splice(index, 1);
+//             localStorage.setItem("HT52VB", JSON.stringify(array));
+//         }
+//         else {
+//             alert("Something went wrong ");
+//         }
+//     });
+// });
