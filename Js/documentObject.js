@@ -2,10 +2,6 @@
 /*
 Here are some of the most common properties of the document object model.
 
-Property
-
-Description
-
 document.anchors
 
 It will return all <a> elements that have a name attribute

@@ -24,9 +24,9 @@
     ["another array", 872],
     { name: "nothing", grade: "a+ from last" },
   ]; //arrays {not necessary to have all data have same data-type} type: object
-  console.log(a,typeof a);
+  console.table(a, typeof a);
 
   let b = { name: 90, objective: "destroy the earth and remake it" }; //objects
-  console.log(b, typeof b);
+  console.table(b, typeof b);
 
 }

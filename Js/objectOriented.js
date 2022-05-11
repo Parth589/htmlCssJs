@@ -14,3 +14,4 @@ function class_name(parameterGivenToConstructor) {
 }
 // defination/declaration of object literal by constructor
 let obj = new class_name(56);
+
