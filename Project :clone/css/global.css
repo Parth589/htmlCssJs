@@ -1,0 +1,39 @@
+header {
+    max-height: 20vh;
+    padding: 10px 0;
+    background-color: transparent;
+    position: absolute;
+    width: 100vw;
+    z-index: 4;
+    top: 0;
+    left: 0;
+}
+
+footer {
+    min-height: 30vh;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger-trigger>img {
+    filter: invert();
+    width: 30px;
+    cursor: pointer;
+}
+
+.mainLogo {
+    filter: invert();
+}
+
+/* section1  */
+.section1 {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/media/section1/background.webp");
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+}

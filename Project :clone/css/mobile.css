@@ -1,0 +1,26 @@
+@media screen and (max-width:600px) {
+    .mainLogo {
+        width: 170px;
+        grid-area: logo;
+        justify-self: center;
+    }
+
+    .navList {
+        display: none;
+    }
+
+    .hamburger-trigger {
+        grid-area: trigger;
+        justify-self: flex-end;
+        padding-right: 20px;
+    }
+
+    .hamburger-trigger>img {
+        width: 25px;
+    }
+
+    nav {
+        display: grid;
+        grid-template-areas: ". logo trigger";
+    }
+}
