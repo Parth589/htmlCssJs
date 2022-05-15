@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        .container {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container ">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+            </div>
+        </nav>
+    </div>
+    <!-- MAIN CONTAINER FOR ALL CONTENT EXPECT NAVBAR -->
+    <div class="container" style="display: flex; flex-direction: column;gap: 1rem;padding: 1rem;">
+        <!-- alerts -->
+        <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alert">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
+        </div>
+        <!-- FORM -->
+        <!-- text input -->
+        <input class="form-control form-control-lg" type="text" placeholder="Book name"
+            aria-label=".form-control-lg example" id="nameBox">
+        <input class="form-control" type="text" placeholder="Author" aria-label="default input example" id="authorBox">
+
+        <!-- checkbox input -->
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="Radio1" checked>
+            <label class="form-check-label" for="Radio1">
+                Default radio
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="Radio2">
+            <label class="form-check-label" for="Radio2">
+                Default radio
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="Radio3">
+            <label class="form-check-label" for="Radio3">
+                Default radio
+            </label>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Submit" style="width: 300px;display: block;margin: auto;"
+            id="submitBtn">
+        <!-- all book's list goes here -->
+        <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Book name</th>
+                    <th>Author</th>
+                    <th>Type</th>
+                    <th>#</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody" style="min-height:800px;max-height:900px;overflow-y: scroll;">
+
+                <!-- sample html for a book object -->
+                <tr>
+                    <td>1</td>
+                    <td>Some books</td>
+                    <td>me as always</td>
+                    <td>Educational</td>
+                    <td><button type="button" class="btn btn-danger"
+                            id="primaryKey assigned to that book object in localstorage">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+<script src="main.js"></script>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is Your webcam</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+    </style>
+</head>
+
+<body>
+    <video id="video" src="#" width="500" height="500" autoplay>
+
+    </video>
+    <button id="start">Start</button><button id="close">close</button>
+</body>
+<script>
+    function close() {
+        var stream = video.srcObject;
+        console.log(video);
+        console.log(video.srcObject);
+        var tracks = stream.getTracks();
+        for (var i = 0; i < tracks.length; i++) {
+            var track = tracks[i];
+            track.stop();
+        }
+        video.srcObject = null;
+    };
+    function st() {
+        var video = document.getElementById('video'),
+            vendorUrl = window.URL || window.webkitURL;
+        if (navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function (stream) {
+                    video.srcObject = stream;
+                }).catch(function (error) {
+                    console.log("Something went wrong!");
+                });
+        }
+    };
+    let start = document.getElementById("start");
+    let cls = document.getElementById("close");
+    start.addEventListener("click", st);
+    cls.addEventListener("click", close);
+</script>
+
+</html>

@@ -1,80 +1,90 @@
-*{
-    margin: 0;padding: 0;
+* {
+    margin: 0;
+    padding: 0;
 }
+
 /* nav bar */
-        header {
-            background-color: #00000000;
-            color: white;
-            border-radius: 23px;
-            margin: 0 20px;
-            position: fixed;
-            top: 0;
-            right: 0;
-        }
+header {
+    background-color: #00000000;
+    color: white;
+    border-radius: 23px;
+    margin: 0 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
 
-        #lst {
-            list-style: none;
-            display: flex;
-            /* justify-content:; */
-            /*manages where the li items should go in the bar*/
-        }
+#lst {
+    list-style: none;
+    display: flex;
+    /* justify-content:; */
+    /*manages where the li items should go in the bar*/
+}
 
-        .itms {
-            margin: 20px;
-            align-items: center;
-        }
+.itms {
+    margin: 20px;
+    align-items: center;
+}
 
-        #nav_usr_img {
-            margin: 10px;
-            width: 50px;
-            height: 50px;
-        }
+#nav_usr_img {
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+}
 
-        .itms a {
-            text-decoration: none;
-            color: rgb(255, 255, 255);
-        }
-        .itms a:hover {
-            color: rgb(184, 10, 10);
-        }
-        /* container */
-        body{
+.itms a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .container{
-            overflow: visible;
-            height: 100vh;
-            width: 99vw;
-            background-image: url('/project2/shubham-dhage-Hatkch_piQM-unsplash.jpg');
-            /* background: fixed; */
-              background-position: center;
-              background-attachment: fixed;
-            background-size: cover;
-            display: flex;
-            flex-direction: row-reverse;
-        }
-        .frstpg{
-            align-self: center;
-            width: 500px;
-            height: 200px;
-            background-color: rgba(0, 0, 255, 0);
-            padding: 10px;
-        }
-        #frm{
-            display: flex;
-            flex-direction: column;
-        }
-        .frm_itms{
-            margin-bottom: 20px;
-            height: 5vh;
-            padding: 10px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .frm_itms:placeholder{
-         
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .frm_itms:active{
-            border: none;
-        }
+.itms a:hover {
+    color: rgb(184, 10, 10);
+}
+
+/* container */
+body {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    overflow: visible;
+    height: 100vh;
+    width: 99vw;
+    background-image: url('/shubham-dhage-Hatkch_piQM-unsplash.jpg');
+    /* background: fixed; */
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.frstpg {
+    align-self: center;
+    width: 500px;
+    height: 200px;
+    background-color: rgba(0, 0, 255, 0);
+    padding: 10px;
+}
+
+#frm {
+    display: flex;
+    flex-direction: column;
+}
+
+.frm_itms {
+    margin-bottom: 20px;
+    height: 5vh;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.frm_itms:placeholder {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.frm_itms:active {
+    border: none;
+}
