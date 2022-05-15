@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <style>
+        .height50px {
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Add Book</h1>
+    <hr>
+    <form action="" style="display: flex;flex-direction: column;" id="bookFrm">
+        <div class="txts">
+            <label for="bookName" style="display:inline-block;width: 200px;">Book name</label>
+            <input type="text" name="bookName" id="bookName" style="padding:5px">
+        </div>
+        <div class="txts">
+            <label for="authorName" style="display:inline-block;width: 200px;">Author name</label>
+            <input type="text" name="authorName" id="authorName" style="padding:5px">
+        </div>
+
+        <label for="radio">Type</label>
+        <div id="radio" style="display: flex; flex-direction: column;">
+            <div class="choices">
+                <input type="radio" name="type" id="typeFiction" checked>
+                <label for="typeFiction">Fiction</label>
+            </div>
+            <div class="choices">
+                <input type="radio" name="type" id="typeProgramming">
+                <label for="typeProgramming">Programming</label>
+            </div>
+            <div class="choices">
+                <input type="radio" name="type" id="typeCooking">
+                <label for="typeCooking">Cooking</label>
+            </div>
+        </div>
+        <input type="submit" value="Add" style="width: 100px; height: 30px;" id="submitBtn">
+    </form>
+    <h1>Your books </h1>
+    <table
+        style="width: 64vw;max-height: 40vw; display: block;margin: auto;background-color: bisque;text-align: center;overflow: scroll;"
+        id="bookTable">
+        <thead>
+
+            <tr style="background-color: grey;" class="height50px">
+                <th style="width: 16vw;min-width: 100px;">Name</th>
+                <th style="width: 16vw;min-width: 100px;">Author</th>
+                <th style="width: 16vw;min-width: 100px;">Type</th>
+                <th style="width: 16vw;min-width: 100px;">#</th>
+            </tr>
+        </thead>
+        <tbody id="bookTableBody">
+
+        </tbody>
+    </table>
+    <!-- <button id="dialogBtn">Touch me</button>
+    <button id="dialogBtn2">Touch me</button>
+    <dialog style="background-color: red;backdrop-filter:blue;">
+        <h1>This is a dialogue</h1>
+    </dialog> -->
+</body>
+<script src="main.js"></script>
+<!-- <script>
+    document.querySelector("#dialogBtn").addEventListener("click", function () {
+        document.querySelector("dialog").show();
+    });
+    document.querySelector("#dialogBtn2").addEventListener("click", function () {
+        document.querySelector("dialog").close();
+    });
+
+</script> -->
+
+</html>
