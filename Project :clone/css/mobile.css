@@ -5,8 +5,9 @@
         justify-self: center;
     }
 
-    .navList {
-        display: none;
+    .nav-list {
+        /* display: none; */
+        top: 49px;
     }
 
     .hamburger-trigger {

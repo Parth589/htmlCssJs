@@ -6,7 +6,7 @@ header {
     max-height: 20vh;
     padding: 10px 0;
     background-color: transparent;
-    position: absolute;
+    position: fixed;
     z-index: 4;
     width: 100%;
     top: 0;
@@ -22,6 +22,28 @@ footer {
 nav {
     display: flex;
     align-items: center;
+}
+
+.nav-list {
+    position: fixed;
+    right: 0;
+    /* top will change according to device */
+    top: 0;
+    height: 100%;
+    background-color: black;
+    text-align: right;
+    z-index: 4;
+    font-weight: normal;
+    font-size: 2rem;
+    width: 0;
+    /* temp styles */
+    /* width: 60vw; */
+    /* animation: menu-close 2s 1 forwards; */
+    /* animation: menu-open 2s 1 forwards; */
+}
+
+.navListItms {
+    margin-right: 15px;
 }
 
 .hamburger-trigger>img {
@@ -40,6 +62,8 @@ nav {
     text-decoration: none;
     font-size: .8rem;
     font-weight: bold;
+    /* width: 250px; */
+    /* height: 100%; */
 }
 
 .primary-links-div {
@@ -48,6 +72,21 @@ nav {
     width: fit-content;
     margin-top: 5px;
 }
+
+.primary-links-div :hover {
+    background-color: black;
+    filter: invert();
+}
+
+/* .primary-links-div::before {
+    content: "";
+    position: static;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+} */
 
 .heading-primary {
     font-size: 2.5rem;
@@ -98,6 +137,7 @@ nav {
 
 .ftr-links-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
 }
