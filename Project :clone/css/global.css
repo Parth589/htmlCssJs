@@ -1,16 +1,22 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Roboto+Flex:wght@700&display=swap');
+
+/* navigation bar */
 header {
     max-height: 20vh;
     padding: 10px 0;
     background-color: transparent;
     position: absolute;
-    width: 100vw;
     z-index: 4;
+    width: 100%;
     top: 0;
     left: 0;
 }
 
 footer {
-    min-height: 30vh;
+    /* min-height: 30vh; */
+    padding: 50px 0;
+    background-color: black;
 }
 
 nav {
@@ -19,21 +25,79 @@ nav {
 }
 
 .hamburger-trigger>img {
-    filter: invert();
     width: 30px;
-    cursor: pointer;
 }
 
-.mainLogo {
-    filter: invert();
+/* global for all sections */
+.content {
+    color: white;
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.primary-links-div {
+    padding: 15px 50px;
+    outline: 2px solid white;
+    width: fit-content;
+    margin-top: 5px;
+}
+
+.heading-primary {
+    font-size: 2.5rem;
+    font-weight: lighter;
+    font-family: 'Koulen', cursive;
+    line-height: 2;
+}
+
+.sections {
+    display: flex;
+    align-items: flex-end;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    /* temp styles */
+    background-color: black;
 }
 
 /* section1  */
 .section1 {
-    width: 100vw;
-    height: 100vh;
     background-image: url("/media/section1/background.webp");
-    background-position: center;
-    background-size: cover;
-    z-index: 1;
+}
+
+.section2 {
+    background-image: url("/media/section2/background.webp");
+}
+
+.section3 {
+    background-image: url("/media/section3/background.webp");
+}
+
+.section4 {
+    background-image: url("/media/section4/background.webp");
+}
+
+.section5 {
+    background-image: url("/media/section5/background.webp");
+}
+
+.section6 {
+    background-image: url("/media/section6/background.webp");
+}
+
+.footer-link {
+    font-weight: 300;
+    font-size: .7rem;
+}
+
+.ftr-links-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }

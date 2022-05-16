@@ -23,4 +23,8 @@
         display: grid;
         grid-template-areas: ". logo trigger";
     }
+
+    .heading-primary {
+        line-height: 1;
+    }
 }

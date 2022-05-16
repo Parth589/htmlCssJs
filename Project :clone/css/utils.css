@@ -8,4 +8,34 @@ ul {
     list-style: none;
 }
 
+/* theming */
+::selection {
+    background-color: white;
+    color: black;
+}
+
 /* utility classes */
+.allCaps {
+    text-transform: uppercase;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.filter {
+    filter: invert();
+}
+
+.font-roboto {
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+.secondary-text {
+    color: gray;
+    font-size: .7rem;
+}
+
+.text-align {
+    text-align: center;
+}
