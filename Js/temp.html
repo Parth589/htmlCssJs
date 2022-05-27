@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docume</title>
+</head>
+
+<body>
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, ratione. Expedita nostrum esse ipsum, atque ad
+        dicta necessitatibus ut qui aperiam aut quod voluptas quae neque ex officia nobis voluptatum!</h3>
+</body>
+<script>
+    // ?: do promises run synchronously or asynchronously?
+    //                      ˄
+    //  ANS:                |
+    function make() {
+        return new Promise((resolve) => {
+            //a very long task.
+            for (let index = 0; index < 45220; index++) {
+                console.log("i am for loop");
+            }
+            console.log(" i am in promise !");
+            resolve();
+        });
+    }
+    // make().then(() => { console.log('Iam then'); });
+    // console.log("I am outside Promise !");
+    // for (let index = 0; index < 45220; index++) {
+    //     console.log("i am for loop");
+    // }
+    async function func() {
+        console.log("1");
+        // await console.log("i am inside func");// this wont work as console.log dont return a promise
+        console.log("2");
+
+        let response = await fetch("/content.txt");
+        console.log("3");
+
+        let data = await response.text();
+        console.log("4");
+
+        // console.log(data);
+        console.log("5");
+
+        return "some random value";
+    }
+    console.log("6");
+    func().then((data) => { console.log(data); });
+    console.log("7");
+    console.time("Loop");
+    // for (let i = 0; i < 200000; i++) {
+    //     console.log('I am for loop');
+    // }
+    console.log("8");
+    console.timeEnd("Loop")
+</script>
+
+</html>

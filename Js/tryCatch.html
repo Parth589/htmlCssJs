@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    try {
+        // if this block gets any error go to the catch block (all previous lines will be executed.)
+        console.log("THis is insidde try");//this will get executed becuse error is not occured till now. 
+        // jkkk;//throw an built-in error.
+        throw (new Error("this type is not detected"));//throw a custom error
+    } catch (error) {
+        // handle error or inform user about it
+        console.warn("SOme error occured...");
+        console.error(error);
+
+    } finally {
+        // Always runs
+        console.log("i am finally...");
+    }
+</script>
+
+</html>

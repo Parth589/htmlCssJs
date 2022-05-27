@@ -11,7 +11,8 @@
     -> if it is responded, it is responsibility of developer to run the resolve function
     -> if not, dev. have to run the reject function
 
-    ->resolve and reject function can be changed in every use of Pomise
+    -> an promise object can be used only once.it is used as it is initialized
+    ->the fnction passed in constructor of Promise is execued at the time when the object is intitiallized
 */
 
 //defining Promise
