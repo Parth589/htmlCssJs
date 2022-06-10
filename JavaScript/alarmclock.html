@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alarm-clock</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            flex-direction: column;
+        }
+
+        .inputs>* {
+            width: 200px;
+            padding: 5px 20px;
+        }
+
+        b {
+            font-size: 30px;
+            text-align: left;
+        }
+
+        .bigBtn {
+            width: 300px;
+            margin: 50px;
+            padding: 5px;
+            font-size: large;
+            border-radius: 100vw;
+            border: 1px solid grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <b id="timerLabel">Set alarm for</b><br>
+        <div class="inputs">
+            <select name="hrs" id="hrs">
+                <option value="volvo">01</option>
+                <option value="saab">02</option>
+                <option value="mercedes">03</option>
+                <option value="audi">04</option>
+            </select>
+            <b id="timerCountLabel">:</b>
+            <select name="mins" id="mins">
+                <option value="volvo">01</option>
+                <option value="saab">02</option>
+                <option value="mercedes">03</option>
+                <option value="audi">04</option>
+            </select>
+        </div>
+        <input type="button" value="Set" class="bigBtn" id="set">
+    </div>
+</body>
+<script>
+    var audio = new Audio("http://codeskulptor-demos.commondatastorage.googleapis.com/pang/paza-moduless.mp3");
+    //set all options because i am not going to write all option tags. 
+    let setOptions = () => {
+        let str = "";
+        for (let index = 0; index < 24; index++) {
+            str += `
+            <option value="${index}">${index}</option>
+            `;
+        }
+        document.getElementById("hrs").innerHTML = str;
+        str = "";
+        for (let index = 1; index <= 60; index++) {
+            str += `
+            <option value="${index}">${index}</option>
+            `;
+        }
+        document.getElementById("mins").innerHTML = str;
+    };
+    setOptions();
+    //function which reset everything cause i dont want to reload the page again and again
+    let reset = () => {
+        document.querySelector(".inputs").innerHTML = `
+        <select name="hrs" id="hrs">
+                <option value="volvo">01</option>
+                <option value="saab">02</option>
+                <option value="mercedes">03</option>
+                <option value="audi">04</option>
+            </select>
+            <b id="timerCountLabel">:</b>
+            <select name="mins" id="mins">
+                <option value="volvo">01</option>
+                <option value="saab">02</option>
+                <option value="mercedes">03</option>
+                <option value="audi">04</option>
+            </select>
+        `;
+        document.querySelector("#timerLabel").innerText = "Set alarm for";
+        document.getElementById("set").value = "Set";
+
+        setOptions();
+        audio.pause();
+    };
+    let showCountDown = (time) => {
+        console.log(time);
+        let secs = time % 60;
+        time = Math.trunc(time / 60);
+        let mins = time % 60;
+        time = Math.trunc(time / 60);
+        let hrs = time;
+        //hide the inputs and timer in place of them
+        document.querySelector("#timerLabel").innerText = "Alarm in...";
+        let inputs = document.querySelector(".inputs");
+        let id = setInterval(() => {
+            inputs.innerHTML = `<b> ${hrs} : ${mins} : ${secs--}</b>`;
+            // logic to update timer correctly in every 1 second
+            if (secs == 0) {
+                //update mins
+                if (mins == 0) {
+                    //update hrs
+                    if (hrs == 0) {
+                        audio.play();
+                        document.getElementById("set").value = "End";
+                        document.getElementById("set").style.display = "unset";
+                        clearInterval(id);
+                    }
+                    else {
+                        hrs--;
+                        mins = 59;
+                        secs = 59;
+                    }
+                }
+                else {
+                    mins--;
+                    secs = 59;
+                }
+            }
+        }, 1000);
+        set.style.display = "none";
+    };
+    let set = document.getElementById("set");
+    let setAlarm = () => {
+        //calculate how much time program have to wait.
+        let hrs = Number(document.getElementById("hrs").value);
+        let mins = Number(document.getElementById("mins").value);
+        let date = new Date();
+        let nowHrs = date.getHours();
+        let nowMins = date.getMinutes();
+        let nowSecs = date.getSeconds();
+        let nowTime = (((nowHrs * 60) + nowMins) * 60) + nowSecs;   // current time in seconds
+        let alarmTime = ((hrs * 60) + mins) * 60;                   // alarm time in seconds
+        if (alarmTime < nowTime) {
+            //tomorrow alarm
+            alarmTime += 86400;
+        }
+
+        let waitTime = alarmTime - nowTime;                         // waiting time in seconds
+        showCountDown(waitTime);
+    };
+
+    // the user will be able to click on set button when either it wants to set the alarm or reject the alarm.
+    set.addEventListener("click", () => {
+        if (audio.paused) {
+            //if alarm is not set
+            setAlarm();
+        }
+        else {
+            //if alarm is set and playing...
+            reset();
+        }
+    })
+</script>
+
+</html>
