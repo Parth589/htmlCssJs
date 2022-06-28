@@ -1,11 +1,14 @@
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    scroll-padding: 50px;
 }
+
 body {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
+
 .flex_all_center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

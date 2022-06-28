@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(211, 209, 209);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container>* {
+            position: absolute;
+        }
+
+        #display {
+            background-color: rgb(200, 210, 232);
+            width: 50vw;
+            height: 30vh;
+            outline: 4px solid grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #up {
+            width: 50vw;
+            height: 15vh;
+            background-color: red;
+            transform: rotateX(60deg);
+            transform: skewY(-15deg);
+        }
+
+        /* Inline #0 | http://127.0.0.1:5500/clock.html */
+
+        #up {
+            width: 554px;
+            height: 133px;
+            transform: translateY(-218px) rotateX(0deg) rotateZ(30deg) skewY(-30deg) translateX(25px);
+            transform-origin: center;
+            z-index: 2;
+        }
+
+        #display {
+            width: 614px;
+            height: 317px;
+        }
+
+        /* Element | http://127.0.0.1:5500/clock.html */
+
+        #left {
+            width: 64px;
+            height: 330px;
+            background-color: black;
+            transform: translateX(340px) skewY(-60deg) translateY(-57px);
+        }
+
+        /* Element | http://127.0.0.1:5500/clock.html */
+
+        #up {
+            width: 537px;
+        }
+
+        /* Inline #0 | http://127.0.0.1:5500/clock.html */
+
+        #up {
+            transform: translateY(-209px) rotateX(0deg) rotateZ(45deg) skewY(-45deg) translateX(33px);
+        }
+
+        #up {
+            width: 436px;
+        }
+
+        #left {
+            width: 95px;
+            height: 325px;
+            transform: translateX(358px) skewY(-45deg) translateY(-48px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="up">
+        </div>
+        <div id="left">
+        </div>
+        <div id="display">
+            thi sis some randm text
+        </div>
+    </div>
+</body>
+
+</html>
